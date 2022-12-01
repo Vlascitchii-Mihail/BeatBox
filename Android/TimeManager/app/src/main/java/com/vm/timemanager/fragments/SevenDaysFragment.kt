@@ -29,6 +29,12 @@ class SevenDaysFragment : Fragment() {
         val viewModel = ViewModelProvider(this)[DaysViewModel::class.java]
         binding.daysViewModel = viewModel
 
+        binding.apply {
+            monday.setOnClickListener {
+//                val action =
+            }
+        }
+
 
 
         return binding.root

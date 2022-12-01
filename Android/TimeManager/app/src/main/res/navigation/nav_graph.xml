@@ -10,6 +10,23 @@
         android:id="@+id/sevenDaysFragment"
         android:name="com.vm.timemanager.fragments.SevenDaysFragment"
         android:label="fragment_seven_days"
-        tools:layout="@layout/fragment_seven_days"/>
+        tools:layout="@layout/fragment_seven_days">
+
+        <action
+            android:id="@+id/action_sevenDaysFragment_to_dayFragment"
+            app:destination="@id/dayFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/dayFragment"
+        android:name="com.vm.timemanager.fragments.DayFragment"
+        android:label="fragment_day"
+        tools:layout="@layout/fragment_day">
+
+        <argument
+            android:name="taskList"
+            app:argType="string"/>
+
+    </fragment>
 
 </navigation>
