@@ -24,7 +24,7 @@
         tools:layout="@layout/fragment_day">
 
         <argument
-            android:name="taskList"
+            android:name="dayName"
             app:argType="string"/>
 
     </fragment>
