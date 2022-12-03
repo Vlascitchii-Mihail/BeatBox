@@ -19,13 +19,29 @@
 
     <fragment
         android:id="@+id/dayFragment"
-        android:name="com.vm.timemanager.fragments.DayFragment"
+        android:name="com.vm.timemanager.fragments.DaysFragment"
         android:label="fragment_day"
-        tools:layout="@layout/fragment_day">
+        tools:layout="@layout/fragment_days">
 
         <argument
             android:name="dayName"
             app:argType="string"/>
+
+        <action
+            android:id="@+id/action_dayFragment_to_newTaskAddingFragment"
+            app:destination="@id/newTaskAddingFragment"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/newTaskAddingFragment"
+        android:name="com.vm.timemanager.fragments.NewTaskAdding"
+        android:label="fragment_new_task_adding"
+        tools:layout="@layout/fragment_new_task_adding">
+
+        <argument
+            android:name="task"
+            app:argType="com.vm.timemanager.data.Task"/>
 
     </fragment>
 

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="task"
+            type="com.vm.timemanager.data.Task" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.NewTaskAdding">
+
+        <EditText
+            android:id="@+id/task_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:text="@={task.taskName}"
+            android:textSize="20sp"
+            tools:text="This is a new task"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:hint="@string/write_a_task_name_here"
+            android:autofillHints="" />
+
+        <EditText
+            android:id="@+id/task_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:text="@={task.taskDescription}"
+            tools:text="This is the task description"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/task_name"
+            android:hint="@string/write_a_description_here"
+            android:autofillHints="" />
+
+        <TextView
+            android:id="@+id/start_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/task_description"
+            android:textSize="20sp"
+            tools:text="Start time: 21.12.22  11:00 Sat"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="10dp"/>
+
+        <TextView
+            android:id="@+id/end_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/start_time"
+            android:textSize="20sp"
+            tools:text="End time: 21.12.22  12:00 Sat"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="10dp"/>
+
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save_the_task"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

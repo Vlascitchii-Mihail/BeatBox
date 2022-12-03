@@ -9,4 +9,9 @@
     <string name="friday">Friday</string>
     <string name="saturday">Saturday</string>
     <string name="sunday">Sunday</string>
+    <string name="add_new_task">Add new task</string>
+    <string name="write_a_description_here">Write a description here</string>
+    <string name="write_a_task_name_here">Write a task name here</string>
+    <string name="save_the_task">Save the task</string>
+    <string name="add_new_task_floating_action_button">Add a new task floating action button</string>
 </resources>

@@ -12,5 +12,5 @@ data class Task(
     var taskName: String = "",
     val startTime: OffsetDateTime? = null,
     val endTime: OffsetDateTime? = null,
-    var taskDescription: String
+    var taskDescription: String = ""
 )

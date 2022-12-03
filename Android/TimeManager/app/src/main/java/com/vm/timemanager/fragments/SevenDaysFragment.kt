@@ -29,7 +29,7 @@ class SevenDaysFragment : Fragment() {
 
         val viewModel = ViewModelProvider(this)[DaysViewModel::class.java]
         binding.daysViewModel = viewModel
-        binding.lifecycleOwner = viewLifecycleOwner
+        //binding.lifecycleOwner = viewLifecycleOwner
 
         val fragment = this
 
